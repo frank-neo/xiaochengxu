@@ -5,8 +5,18 @@ var text = "这是一个测试utils.js的信息";
 var testUtil = function(){
   return text;
 }
-
 module.exports = {
   text: text,
   testUtil: testUtil
+}
+
+var index = 1 ;
+var testclick = function(){
+  index++;
+  return "普通按钮第"+index+"次单击测试";
+}
+
+module.exports = {
+  index: index,
+  testclick: testclick
 }
