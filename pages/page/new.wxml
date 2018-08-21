@@ -1,3 +1,9 @@
 <view class="container">
 <button bindtap="returnIndex" type='primary'>点我返回上一页</button>
+  <!--测试一下html页面跳转-->
+  <view class='page-body'>
+    <view>
+      <web-view src = "http://ragdollhouse.club/">baidu</web-view>
+    </view>
+  </view>
 </view>
