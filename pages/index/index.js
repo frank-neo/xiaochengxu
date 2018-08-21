@@ -36,13 +36,12 @@ Page({
   changeName:function(){
     console.log(util.testclick())
   },
-  //点击按钮获取用户数据
-  getUserInfo:function(){
-    wx.getUserInfo({
-      success: function (res) {
-        that.globalData.userInfo = res.userInfo;
-        typeof cb == "function" && cb(that.globalData.userInfo)
-      }
-    })
+  //分享小程序
+  onShareAppMessage: function () {
+    return {
+      title: '微信小程序',
+      desc: '最具人气的小程序开发!',
+      path: '/page/user?id=123'
+    }
   }
 })
