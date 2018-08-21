@@ -1,0 +1,3 @@
+<view class="container">
+<button bindtap="returnIndex" type='primary'>点我返回上一页</button>
+</view>

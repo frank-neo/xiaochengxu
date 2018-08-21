@@ -14,6 +14,11 @@
     <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
   </view>
 
+    <!--点击按钮跳转到内部页面-->
+  <view>
+    <button type="primary" bindtap="toNew">跳转到new页</button>
+  </view>
+
   <!--获取helloworld-->
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>

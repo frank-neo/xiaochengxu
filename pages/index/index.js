@@ -10,19 +10,19 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   // 事件处理函数
-  bindViewTap: function () {
+  bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  onLoad: function() {
     // 查看是否授权
     wx.getSetting({
-      success: function (res) {
+      success: function(res) {
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称
           wx.getUserInfo({
-            success: function (res) {
+            success: function(res) {
               console.log(res.userInfo)
             }
           })
@@ -30,14 +30,21 @@ Page({
       }
     })
   },
-  bindGetUserInfo: function (e) {
+  bindGetUserInfo: function(e) {
     console.log(e.detail.userInfo)
   },
-  changeName:function(){
+  changeName: function() {
     console.log(util.testclick())
   },
+
+  //跳转到new
+  toNew: function() {
+    wx.navigateTo({
+      url: '../page/new',
+    })
+  },
   //分享小程序
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
     return {
       title: '微信小程序',
       desc: '最具人气的小程序开发!',
