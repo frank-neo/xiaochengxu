@@ -1,0 +1,19 @@
+<!--index.wxml-->
+
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <!--<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>-->
+  </view>
+  
+  <!--点击按钮获取getUserInfo-->
+  <view>
+    <button class='getUserInfo'>测试获取getUserInfo</button>
+    <button bindtap="changeName">普通按钮</button>
+  </view>
+  
+  <!--获取helloworld-->
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
